@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my order</title>
+    <link rel="stylesheet" href="myorder.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap" rel="stylesheet">
+        
+</head>
+<body>
+    <div class="navbar">
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="  Search...">
+            <button class="search-button"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contactus.html">Contact us</a></li>
+                <li><a href="myorder.html" class="active">My order</a></li>
+            </ul>
+        </div>
+
+        <div class="login">
+            <a href="login.html"> <button><i class="fa-regular fa-user"></i><b>Login</b></button></a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="head">
+        <h1>My Orders</h1>
+    </div>
+    <div class="order" id="order1">
+        <img src="m1.jpg" style="width:150px;height:150px" alt="Product Image" class="product-image">       
+        <div class="product-summary">
+            <h2>Nike Luka 3 PF 'Motorsport'
+                Basketball Shoes</h2>
+            <p>Price: ₹5000</p>
+            <p>Quantity: 2</p>
+        </div>
+
+
+        <button class="cancel-btn" onclick="cancelOrder('order1')">Cancel</button>
+    </div>
+    <p id="cancel-message" class="para" style="display: none;">NO ORDER PLACED YET</p>
+
+
+<br>
+<footer>
+        
+    <span>agro</span> <br> &copy; 2024 | <a href="">Privacy policy</a>
+</footer>
+</body>
+
+
+<script>
+   function cancelOrder(orderId) {
+  var order = document.getElementById(orderId);
+  order.remove(); // Removes the entire product section
+  
+  // Show the cancel message
+  var cancelMessage = document.getElementById('cancel-message');
+  cancelMessage.style.display = 'block';
+}
+</script>
+</html>
